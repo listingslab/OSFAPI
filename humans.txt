@@ -1,0 +1,53 @@
+
+    If you're human, you're reading this. Hello.
+ 
+    /////////////////////////////////
+
+   	/* TEAM */
+   	
+    Developer: Chris Dorward
+    Company: Listingslab
+    Site: http://listingslab.com
+    github: https://github.com/listingslab
+    Location: Adelaide, Australia.    
+   
+    			[...]
+    			
+    /* What are you looking at? */    	
+    
+    OSFrontend
+    
+    Combining the functionality of Google Analytics 
+	and Facebook Messenger putting you in touch with 
+	your website visitors in real time
+
+	/* THANKS TO*/
+	Ms Red, the muse
+    
+    					[...]      
+                        
+		    /* Open Source Technology Stack */
+		   
+		    LAMP
+		    Linx, Apache, MySQL, PHP. Standard, really
+		    
+		    jQuery           
+		    http://jquery.com
+		    jQuery is a fast, small, and feature-rich JavaScript library.
+		        
+		    jQuery  UI
+		    http://jqueryui.com
+		    jQuery UI is a curated set of user interface interactions, 
+		    effects, widgets, and themes built on top of the jQuery JavaScript Library.
+
+		    jquery.cookie
+		    https://github.com/carhartl/jquery-cookie
+		    A simple, lightweight jQuery plugin for reading, writing and deleting cookies.
+		       
+    ,-----.,--.                  ,--. 
+    '  .--./|  | ,---. ,--.,--. ,-|  |
+    '  '--'\|  |' '-' ''  ''  '\ `-' |
+     `-----'`--' `---'  `----'  `---' 
+    ----------------------------------
+    
+Tara then.
