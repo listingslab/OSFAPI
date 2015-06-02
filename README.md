@@ -1,4 +1,6 @@
-OSFrontend RESTful API
+#OSFAPI
+
+##A RESTful API written in PHP, using MySQLi Prepared statements
 
 This is where we get really clever
 made in AptanaStudio3
