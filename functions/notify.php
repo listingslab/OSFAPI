@@ -14,22 +14,26 @@ if ( ! function_exists( 'notify' ) ) :
 		$message['to'] = 'listingslab@me.com';
 		$message['from'] = "OSFrontend <support@osfrontend.com>";
 		$message['h:Reply-To'] = "OSFrontend <support@osfrontend.com>";
-		$message['html'] = '<style>a {color:black; text-decoration:none;}</style>';
+		$message['html'] = '<style>a {color: #003366; text-decoration:none;}</style>';
 		$message['html'] .= '<img height="20" hspace="5" align="left" src="http://osfrontend.com/OSFAPI/img/osfrontend.png" />';
 		
 		if (isset ($api['query']['clickurl'])){
 			$clickurl = $api['query']['clickurl'];
-			$message['html'] .= '<a href="'.$clickurl.'">';
+			//$message['html'] .= '<a href="'.$clickurl.'">';
 			$islinked = true;
 		}
 		if (isset ($api['query']['body'])){
-			$message['html'] .= ' > ' . $api['query']['body'];
+			$message['html'] .= '<p>' . $api['query']['body'] . '</p>';
 		}else{
 			$message['html'] .= ' > Love from OSFrontend.';
 		}
+		
+		$message['html'] .= $api['query']['clickurl'];
+		
 		if (isset ($islinked)){
-			$message['html'] .= '</a>';
+			//$message['html'] .= '</a>';
 		}
+		
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $config['api_url']);
 		curl_setopt($ch, CURLOPT_HTTPAUTH, CURLAUTH_BASIC);
