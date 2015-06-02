@@ -1,0 +1,23 @@
+CREATE TABLE `api_visitors` (
+  `v_id` int(11) NOT NULL AUTO_INCREMENT,
+  `sitename` varchar(45) DEFAULT NULL,
+  `lasttitle` varchar(45) DEFAULT NULL,
+  `name` varchar(45) DEFAULT 'anonymous',
+  `lasturl` varchar(45) DEFAULT NULL,
+  `cookie` varchar(45) DEFAULT NULL,
+  `userip` varchar(45) DEFAULT NULL,
+  `country_name` varchar(45) DEFAULT NULL,
+  `country_code` varchar(45) DEFAULT NULL,
+  `city` varchar(45) DEFAULT NULL,
+  `region_code` varchar(45) DEFAULT NULL,
+  `zip_code` varchar(45) DEFAULT NULL,
+  `time_zone` varchar(45) DEFAULT NULL,
+  `latitude` varchar(45) DEFAULT NULL,
+  `longitude` varchar(45) DEFAULT NULL,
+  `hostname` varchar(45) DEFAULT NULL,
+  `agent` varchar(255) DEFAULT NULL,
+  `serverip` varchar(45) DEFAULT NULL,
+  `firstvisit` int(10) DEFAULT NULL,
+  `lastvisit` int(10) DEFAULT NULL,
+  PRIMARY KEY (`v_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;

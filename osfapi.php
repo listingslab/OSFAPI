@@ -7,7 +7,7 @@
 	include 'functions.php';
 	global $api;
 	$api = array();
-	$api ['vs'] = '3.5.6';
+	$api ['vs'] = '3.5.7';
 	$api['query'] = $_GET;
 	$api['output'] = array ();
 	$api['output']['API'] = 'I am OSFAPI version '.$api ['vs'];
