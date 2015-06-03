@@ -19,7 +19,7 @@ if ( ! function_exists( 'notify' ) ) :
 		
 		if (isset ($api['query']['clickurl'])){
 			$clickurl = $api['query']['clickurl'];
-			//$message['html'] .= '<a href="'.$clickurl.'">';
+			$message['html'] .= '<a href="'.$clickurl.'">';
 			$islinked = true;
 		}
 		if (isset ($api['query']['body'])){
@@ -28,10 +28,11 @@ if ( ! function_exists( 'notify' ) ) :
 			$message['html'] .= ' > Love from OSFrontend.';
 		}
 		
-		$message['html'] .= $api['query']['clickurl'];
+		//$message['html'] .= $api['query']['clickurl'];
+		$message['html'] .= 'Click to respond';
 		
 		if (isset ($islinked)){
-			//$message['html'] .= '</a>';
+			$message['html'] .= '</a>';
 		}
 		
 		$ch = curl_init();

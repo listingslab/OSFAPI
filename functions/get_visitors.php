@@ -11,7 +11,7 @@ if ( ! function_exists( 'get_visitors' ) ) :
 			$api ['db']->WHERE ("hostname", $api['query']['hostname']);
 		}			
 		$api ['db']->orderBy ("lastvisit", 'DESC');
-		$visitors = $api ['db']->get ("api_visitors", 50);
+		$visitors = $api ['db']->get ("osf_visitors", 50);
 		$api['output']['visitors'] = $visitors;
 	}
 endif;

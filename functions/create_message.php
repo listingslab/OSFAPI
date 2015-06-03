@@ -14,7 +14,7 @@ if ( ! function_exists( 'create_message' ) ) :
 	        'message' => $inputs ['message'],
 	        'time_sent' => time(),
 	    );
-		$m_id= $api ['db']->insert ('api_messages', $api['output']['data']);
+		$m_id= $api ['db']->insert ('osf_messages', $api['output']['data']);
 		$api['output']['m_id'] = $m_id;
 	}
 endif;

@@ -6,12 +6,12 @@ if ( ! function_exists( 'get_visitor' ) ) :
 		$go = false;
 		if (isset ($api['query']['v_id'])){
 			$api ['db']->WHERE ("v_id", $api['query']['v_id']);
-			$api['output']['visitor'] = $api ['db']->get ("api_visitors");
+			$api['output']['visitor'] = $api ['db']->get ("osf_visitors");
 			$go = true;
 		}
 		if (isset ($api['query']['cookie'])){
 			$api ['db']->WHERE ("cookie", $api['query']['cookie']);
-			$api['output']['visitor'] = $api ['db']->get ("api_visitors");
+			$api['output']['visitor'] = $api ['db']->get ("osf_visitors");
 			$go = true;
 		}
 		if (count($api['output']['visitor']) == 0){
@@ -20,7 +20,6 @@ if ( ! function_exists( 'get_visitor' ) ) :
 			$go = false;
 		}
 		if ($go){
-			$api['output']['message'] = 'All good';
 			$api['output']['status'] = 'OK';
 		}else{
 			$api['output']['status'] = 'FAIL';

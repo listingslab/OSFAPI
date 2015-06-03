@@ -8,7 +8,7 @@ if ( ! function_exists( 'check_apikey' ) ) :
 		$cols = Array ("apikey");
 		$api ['db']->where ('apikey', $apikey);
 		$api ['db']->where ('active', 1);
-		$result = $api ['db']->get ('api_keys');
+		$result = $api ['db']->get ('osf_keys');
 		if ($api ['db']->count > 0){
 			return true;
 		}else{

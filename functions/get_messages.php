@@ -10,7 +10,7 @@ if ( ! function_exists( 'get_messages' ) ) :
 		$api ['db']->orderBy ("time_sent", 'DESC');
 		$api ['db']->WHERE ("hostname", $inputs ['hostname']);
 		$api ['db']->WHERE ("v_id_to", 'admin');
-		$messages = $api ['db']->get ("api_messages", 25);
+		$messages = $api ['db']->get ("osf_messages", 25);
 		$api['output']['messages'] = $messages;	
 		 
 	}

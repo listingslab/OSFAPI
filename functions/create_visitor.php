@@ -27,7 +27,7 @@ if ( ! function_exists( 'create_visitor' ) ) :
 	        'firstvisit' => time(),
 	        'lastvisit' => time()
 	    );
-	    $id = $api ['db']->insert ('api_visitors', $data);
+	    $id = $api ['db']->insert ('osf_visitors', $data);
 		$api['output']['v_id'] = $id;
 	}
 endif;

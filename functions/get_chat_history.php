@@ -8,7 +8,7 @@ if ( ! function_exists( 'get_chat_history' ) ) :
 		$api ['db']->WHERE ("v_id_to", $api['query']['v_id']);
 		$api ['db']->orWHERE ("v_id_from", $api['query']['v_id']);			
 		$api ['db']->orderBy ("time_sent", 'DESC');
-		$messages = $api ['db']->get ("api_messages", 10);
+		$messages = $api ['db']->get ("osf_messages", 10);
 		$api['output']['messages'] = $messages;
 	}
 endif;
