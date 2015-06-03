@@ -17,6 +17,10 @@
 		$api['output']['action'] = $api['query']['action'];
 		switch ($api['query']['action']) {
 			
+			case 'delete_message':
+				delete_message ();
+		        break;
+		        
 			case 'get_chat_history':
 				get_chat_history ();
 		        break;

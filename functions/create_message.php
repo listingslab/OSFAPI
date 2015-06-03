@@ -9,8 +9,7 @@ if ( ! function_exists( 'create_message' ) ) :
 		$api['output']['data'] = Array(
 			'hostname' => $inputs ['hostname'],
 			'name' => $inputs ['name'],
-	        'v_id_to' => $inputs ['v_id_to'],
-	        'v_id_from' => $inputs ['v_id_from'],
+	        'v_id' => $inputs ['v_id'],
 	        'message' => $inputs ['message'],
 	        'time_sent' => time(),
 	    );
