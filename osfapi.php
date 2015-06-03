@@ -7,7 +7,7 @@
 	include 'functions.php';
 	global $api;
 	$api = array();
-	$api ['vs'] = '3.5.7';
+	$api ['vs'] = '3.5.8';
 	$api['query'] = $_GET;
 	$api['output'] = array ();
 	$api['output']['API'] = 'I am OSFAPI version '.$api ['vs'];
@@ -16,6 +16,10 @@
 		setup_database ();
 		$api['output']['action'] = $api['query']['action'];
 		switch ($api['query']['action']) {
+			
+			case 'get_chat_history':
+				get_chat_history ();
+		        break;
 			
 			case 'get_messages':
 				get_messages ();

@@ -1,7 +1,8 @@
 <?php
 	include 'functions/check_apikey.php';// Checks apikey is valid
-	include 'functions/create_visitor.php';// Creates a new visitor
 	include 'functions/create_message.php';// Creates a new message
+	include 'functions/create_visitor.php';// Creates a new visitor
+	include 'functions/get_chat_history.php';// Returns chat history for v_id
 	include 'functions/get_current_url.php';// Returns the current url
 	include 'functions/get_messages.php';//  Gets messages by hostname and v_id_to
 	include 'functions/get_visitor.php';// Returns visitor information
