@@ -12,8 +12,7 @@ if ( ! function_exists( 'check_apikey' ) ) :
 		if ($api ['db']->count > 0){
 			return true;
 		}else{
-			$api['output']['status'] = 'Fail';
-			$api['output']['message'] = 'apikey ' . $apikey . ' not found';
+			return false;
 		}
 	}
 endif;
