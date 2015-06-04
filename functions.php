@@ -4,6 +4,7 @@
 	include 'functions/create_visitor.php';// Creates a new visitor
 	include 'functions/delete_message.php';// Creates a new visitor
 	include 'functions/func_current_url.php';// Returns the current url
+	include 'functions/func_random_number.php';// Returns a random number of x digits
 	include 'functions/get_chat_history.php';// Returns chat history for v_id
 	include 'functions/get_key_data.php';// Returns or creates apikey data
 	include 'functions/get_messages.php';//  Gets messages by hostname and v_id_to
@@ -12,10 +13,4 @@
 	include 'functions/notify.php';// Sends email using mailgun
 	include 'functions/osf_output.php';// Outputs the response
 	include 'functions/setup_database.php';// Creates a connection to the DB using MySQLi
-
-	if ( ! function_exists( 'random_number' ) ) :
-		function random_number ($digits) {
-		  return rand (pow(10, $digits - 1) - 1, pow(10, $digits) - 1);
-		}
-	endif;
 ?>

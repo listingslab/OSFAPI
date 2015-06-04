@@ -13,7 +13,7 @@ if ( ! function_exists( 'get_key_data' ) ) :
 		}else{
 			$api['output']['key_data'] = 'create_new key';
 			$data = Array(
-				'apikey' => 'apikey-public-'.random_number (4).'-'.random_number (4),
+				'apikey' => 'apikey-public-'.func_random_number (4).'-'.func_random_number (4),
 		        'key_url' => $api['query']['key_url'],
 		        'sitename' => $api['query']['sitename'],
 		        'access_level' => 'public',
