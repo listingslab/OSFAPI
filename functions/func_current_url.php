@@ -1,7 +1,7 @@
 <?php
 // Gets current irl
-if ( ! function_exists( 'get_current_url' ) ) :
-	function get_current_url () {
+if ( ! function_exists( 'func_current_url' ) ) :
+	function func_current_url () {
 		global $api;
 		$pageURL = 'http';
 		if ($_SERVER["HTTPS"] == "on") {$pageURL .= "s";}

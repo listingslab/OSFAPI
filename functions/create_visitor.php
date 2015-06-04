@@ -9,7 +9,7 @@ if ( ! function_exists( 'create_visitor' ) ) :
 		$inputs ['agent'] = $_SERVER['HTTP_USER_AGENT'];
 		//$api['output']['inputs'] = $inputs;
 		$data = Array(
-			'name' => 'User' . n_digit_random (4),
+			'name' => 'User' . random_number (4),
 	        'agent' => $inputs ['agent'],
 	        'cookie' => $inputs ['cookie'],
 	        'userip' => $inputs ['userip'],
