@@ -6,7 +6,7 @@
 	ini_set('display_errors', '1'); //error_reporting(E_ALL); 
 	include 'functions.php';
 	global $api; $api = array();
-	$api ['vs'] = '3.6.0';
+	$api ['vs'] = '3.6.1';
 	$api['query'] = $_GET;
 	$api['output'] = array ();
 	$api['output']['API'] = 'I am OSFAPI version '.$api ['vs'];
@@ -20,6 +20,7 @@
 		if ($valid_key){
 			$api['output']['action'] = $api['query']['action'];
 			switch ($api['query']['action']) {
+				case 'notify_new_user': notify_new_user (); break;
 				case 'get_key_data': get_key_data (); break;
 				case 'delete_message': delete_message (); break;
 			    case 'get_chat_history': get_chat_history (); break;

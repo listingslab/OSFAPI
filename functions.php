@@ -12,6 +12,7 @@
 	include 'functions/get_visitor.php'; // Returns visitor information
 	include 'functions/get_visitors.php'; // Returns latest visitors
 	include 'functions/notify.php'; // Sends email using mailgun
+	include 'functions/notify_new_user.php'; // Sends new user notification using mailgun
 	include 'functions/osf_output.php'; // Outputs the response
 	include 'functions/setup_database.php'; // Creates a connection to the DB using MySQLi
 ?>

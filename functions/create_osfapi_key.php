@@ -8,9 +8,9 @@ if ( ! function_exists( 'create_osfapi_key' ) ) :
 		$new_key = 'apikey-public-'.func_random_number (4).'-'.func_random_number (4);
 		$data = Array(
 			'osfapi_key' => $new_key,
-	        'key_url' => $api['query']['key_url'],
 	        'sitename' => $api['query']['sitename'],
 	        'access_level' => 'public',
+	        'url' => $api['query']['url'],
 	        'email' => $api['query']['user_email'],
 	        'name' => $api['query']['user_login'],
 	        'notify_visit' => 1,
