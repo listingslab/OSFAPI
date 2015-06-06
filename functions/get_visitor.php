@@ -1,30 +1,17 @@
 <?php
-// Gets visitor by v_id or cookie
+// Gets visitor by cookie
 if ( ! function_exists( 'get_visitor' ) ) :
 	function get_visitor (){
 		global $api;
-		$go = false;
-		if (isset ($api['query']['v_id'])){
-			$api ['db']->WHERE ("v_id", $api['query']['v_id']);
-			$api['output']['visitor'] = $api ['db']->get ("osf_visitors");
-			$go = true;
-		}
-		if (isset ($api['query']['cookie'])){
-			$api ['db']->WHERE ("cookie", $api['query']['cookie']);
-			$api['output']['visitor'] = $api ['db']->get ("osf_visitors");
-			$go = true;
-		}
-		if (count($api['output']['visitor']) == 0){
-			unset ($api['output']['visitor']);
-			$api['output']['message'] = 'Visitor not found';
-			$go = false;
-		}
-		if ($go){
+		$api ['db']->WHERE ("cookie", $api['query']['cookie']);
+		$visitor = $api ['db']->get ("osf_visitors", 1);
+		if ($api ['db']->count > 0){
 			$api['output']['status'] = 'OK';
+			$api['output']['visitor'] = $visitor[0];
 		}else{
 			$api['output']['status'] = 'FAIL';
+			$api['output']['message'] = 'No visitor found';
 		}
-		
 	}
 endif;
 ?>

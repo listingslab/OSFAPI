@@ -15,4 +15,6 @@
 	include 'functions/notify_new_user.php'; // Sends new user notification using mailgun
 	include 'functions/osf_output.php'; // Outputs the response
 	include 'functions/setup_database.php'; // Creates a connection to the DB using MySQLi
+	include 'functions/update_settings.php'; // Update the plugin settings
+	include 'functions/update_visitor.php'; // Update visitor (ting)
 ?>

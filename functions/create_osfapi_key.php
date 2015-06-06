@@ -18,8 +18,6 @@ if ( ! function_exists( 'create_osfapi_key' ) ) :
 	        'active' => 1
 	    );
 		$api ['db']->insert ('osf_keys', $data);
-		//$api ['db']->WHERE ("k_id", $k_id);
-		//$api['output']['key_data'] = $api ['db']->get ("osf_keys", 1);
 		$api['output']['message'] = 'New osfapi_key created';
 		$api['output']['status'] = 'OK';
 		$api['output']['osfapi_key'] = $new_key;
