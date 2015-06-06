@@ -7,12 +7,13 @@ if ( ! function_exists( 'create_visitor' ) ) :
 		$api['output']['message'] = 'Creating Visitor';
 		$data = Array(
 	        'cookie' => $api['query']['cookie'],
+	        'visits' => 1,
 	        'userip' => $api['query']['userip'],
 	        'hostname' => $api['query']['hostname'],
 	        'sitename' => $api['query']['sitename'],
 	        'lasturl' => $api['query']['lasturl'],
 	        'lasttitle' => $api['query']['lasttitle'],
-	        'lastting' => time(),
+	        'lastvisit' => time(),
 	        'location' => 'no',
 	        'agent' => $_SERVER['HTTP_USER_AGENT'],
 	        'created' => time()
