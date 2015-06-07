@@ -1,4 +1,4 @@
-#OSFAPI
+#OSFAPI for OSFrontend
 
 ##A RESTful API written in PHP, using MySQLi Prepared statements
 
